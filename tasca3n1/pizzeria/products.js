@@ -1,0 +1,2 @@
+
+db.createCollection( 'products', {validator: {$jsonSchema: {bsonType: 'object',title:'products',required: [         'name',          'description',          'imagePath',          'price',          'productType'],properties: {name: {bsonType: 'string'},description: {bsonType: 'string'},imagePath: {bsonType: 'string'},price: {bsonType: 'double'},productType: {bsonType: 'objectId'}}         }      }});  
