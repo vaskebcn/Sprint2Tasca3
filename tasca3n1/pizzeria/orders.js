@@ -1,2 +1,0 @@
-
-db.createCollection( 'orders', {validator: {$jsonSchema: {bsonType: 'object',title:'orders',required: [         'time',          'takeAway("Y","N")',          'quantity',          'price',          'employees',          'products',          'client'],properties: {time: {bsonType: 'timestamp'},takeAway("Y","N"): {enum: },quantity: {bsonType: 'int'},price: {bsonType: 'double'},employees: {bsonType: 'objectId'},products: {bsonType: 'objectId'},client: {bsonType: 'objectId'}}         }      }});  

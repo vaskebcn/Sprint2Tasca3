@@ -1,3 +1,0 @@
-
-db.createCollection( 'glasses', {validator: {$jsonSchema: {bsonType: 'object',title:'glasses',required: [         'marca',          'spec.dioptersL',          'spec.dioptersR',          'spec.type("F","P","M")',          'spec.frame_color',          'spec.glass_colour',          'price',          'provider'],properties: {marca: {bsonType: 'string'},spec: {bsonType: 'object',
-title:'object',},spec.dioptersL: {bsonType: 'double'},spec.dioptersR: {bsonType: 'double'},spec.type("F","P","M"): {enum: },spec.frame_color: {bsonType: 'string'},spec.glass_colour: {bsonType: 'string'},price: {bsonType: 'double'},provider: {bsonType: 'objectId'}}         }      }});  
