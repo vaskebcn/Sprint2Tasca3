@@ -1,0 +1,6 @@
+
+db.createCollection( 'Shop', {validator: {$jsonSchema: {bsonType: 'object',title:'Shop',required: [         'client',          'sales',          'Provider'],properties: {client: {bsonType: 'array',items: {
+title:'object',required: [         'id',          'name',          'surname',          'phone',          'email',          'address'],properties: {id: {bsonType: 'int'},name: {bsonType: 'string'},surname: {bsonType: 'string'},phone: {bsonType: 'int'},email: {bsonType: 'string'},dateReg: {bsonType: 'timestamp'},address: {bsonType: 'object',
+title:'object',required: [         'street',          'number',          'zipcode',          'state'],properties: {street: {bsonType: 'string'},number: {bsonType: 'int'},floor: {bsonType: 'string'},door: {bsonType: 'string'},zipcode: {bsonType: 'int'},state: {bsonType: 'string'}}}}}},sales: {bsonType: 'array',items: {
+title:'object',required: [         'sales_id',          'employee',          'date',          'glasses_id'],properties: {sales_id: {bsonType: 'int'},employee: {bsonType: 'object',
+title:'object',required: [         'name',          'surname'],properties: {name: {bsonType: 'string'},surname: {bsonType: 'string'}}},date: {bsonType: 'timestamp'},glasses_id: {bsonType: 'int'},client_id: {bsonType: 'int'}}}},Provider: {bsonType: 'objectId'}}         }      }});  

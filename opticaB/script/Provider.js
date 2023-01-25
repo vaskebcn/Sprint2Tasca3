@@ -1,0 +1,7 @@
+
+db.createCollection( 'Provider', {validator: {$jsonSchema: {bsonType: 'object',title:'Provider',required: [         'provider',          'address',          'glasses'],properties: {provider: {bsonType: 'object',
+title:'object',required: [         'name',          'surname',          'phone',          'fax',          'nif'],properties: {name: {bsonType: 'string'},surname: {bsonType: 'string'},phone: {bsonType: 'int'},fax: {bsonType: 'int'},nif: {bsonType: 'string'}}},address: {bsonType: 'object',
+title:'object',required: [         'street',          'number',          'zipcode',          'state'],properties: {street: {bsonType: 'string'},number: {bsonType: 'int'},floor: {bsonType: 'string'},door: {bsonType: 'string'},zipcode: {bsonType: 'int'},state: {bsonType: 'int'}}},glasses: {bsonType: 'array',items: {
+title:'object',required: [         'brand',          'frameType'],properties: {glasses_id: {bsonType: 'int'},brand: {bsonType: 'string'},diopters: {bsonType: 'object',
+title:'object',properties: {left: {bsonType: 'string'},right: {bsonType: 'string'}}},frameType: {enum: },glassColor: {bsonType: 'object',
+title:'object',properties: {left: {bsonType: 'string'},right: {bsonType: 'string'}}},price: {bsonType: 'double'}}}}}         }      }});  
